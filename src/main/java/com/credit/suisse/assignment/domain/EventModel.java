@@ -9,14 +9,14 @@ host:"12345", "timestamp":1491377495217}
 	 */
 	
 	private String id;
-	private Date timestamp;
+	private long timestamp;
 	private String type;
 	private String host;
 	private EventState state;
 	
 	
 	
-	public EventModel(String id, Date timestamp, String type, String host, EventState state) {
+	public EventModel(String id, long timestamp, String type, String host, EventState state) {
 		this.id = id;
 		this.timestamp = timestamp;
 		this.type = type;
@@ -24,16 +24,20 @@ host:"12345", "timestamp":1491377495217}
 		this.state = state;
 	}
 	
+	public EventModel() {
+		
+	}
+
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public Date getTimestamp() {
+	public long getTimestamp() {
 		return timestamp;
 	}
-	public void setTimestamp(Date timestamp) {
+	public void setTimestamp(long timestamp) {
 		this.timestamp = timestamp;
 	}
 	public String getType() {
